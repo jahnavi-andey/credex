@@ -1,12 +1,51 @@
-# React + Vite
+# SoftSell
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a front-end interface of a Software selling platform with a mock LLM-powered chat application. It features a sleek design, modern UI components, and a responsive layout optimized for both light and dark themes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features Implemented
 
-## Expanding the ESLint configuration
+- **Favicon**: Custom favicon for branding and better UX.
+- **SEO Enhancements**:
+  - Proper SEO meta tags added.
+  - Dynamic page title set for better search visibility.
+- **Light/Dark Mode Toggle**:
+  - User-friendly toggle for switching between light and dark themes.
+  - Mode is remembered across sessions using local storage.
+- **Animations**:
+  - Smooth transitions and animations powered by Framer Motion.
+- **LLM-Powered Chat Feature**:
+  - Mock chat interaction powered by dummy LLM responses.
+  - Real-time typed message simulation.
+  
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎨 Design Choices
+
+- **Framework**: Built using **React.js** with **Vite** for a blazing-fast development experience.
+- **UI/UX**:
+  - Minimalist chat layout.
+  - Responsive design for mobile and desktop.
+- **Data**:
+  - Uses **dummy data** to simulate LLM responses.
+  - Easily replaceable with real API integration.
+- **Deployment**:
+  - Hosted on **Vercel** for fast global delivery and zero-config deployment.
+
+---
+
+## ⏱️ Time Spent
+
+**Total Time**: 1 day  
+Focused on clean UI/UX, accessibility, animations, and smooth theme switching.
+
+---
+
+## 🛠️ Setup Instructions
+
+```bash
+git clone https://github.com/yourusername/credex.git
+cd credex
+npm install
+npm run dev
