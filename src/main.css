@@ -1,0 +1,368 @@
+/* Root Variables */
+:root {
+    --bg-gradient: linear-gradient(135deg, #FFB300, #FF7043);  /* Gradient from Mustard Yellow to Soft Coral */
+    --text-color: #263238;  /* Dark Charcoal */
+    --primary-bg: #F0F4F8;  /* Soft off-white for the main background */
+    --highlight-color: #6A1B9A;  /* Vibrant Purple */
+    --secondary-color: #FF7043;  /* Soft Coral-Orange */
+    --button-bg: #6A1B9A;  /* Vibrant Purple */
+    --button-hover-bg: #FFB300;  /* Mustard Yellow on Hover */
+    --input-focus-border: #6A1B9A;  /* Border focus on inputs */
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --tile-shadow: rgba(0, 0, 0, 0.2);
+    --soft-accent-color: #1DE9B6;  /* Teal */
+    --text-light: #F5F5F5;  /* Light text color */
+    --gradient-hover: linear-gradient(135deg, #FF7043, #FFB300);
+}
+
+.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #263238, #1DE9B6);  /* Dark gradient */
+    --text-color: #F5F5F5; /* Light text color */
+    --primary-bg: #333333; /* Dark background */
+    --highlight-color: #1DE9B6; /* Teal */
+    --button-bg: #FF7043; /* Dark orange */
+    --button-hover-bg: #FFB300; /* Mustard yellow */
+    --box-shadow: rgba(255, 255, 255, 0.1);
+    --input-focus-border: #FF7043; /* Orange focus for inputs */
+    
+    /* Apply dark background to all sections except hero */
+    section {
+        background-color: var(--primary-bg);
+        color: var(--text-color);
+    }
+    
+    /* Specific rules for hero section */
+    .hero-header {
+        background: var(--bg-gradient) !important; /* Retain the original gradient in hero section */
+    }
+}
+
+.dark-mode section {
+    background-color: var(--primary-bg);  /* Dark mode background for sections */
+}
+
+.dark-mode .step, .dark-mode .tile, .dark-mode .testimonial {
+    background-color: #444444;  /* Dark background for tiles */
+    color: var(--text-light);  /* Light text color for tiles */
+}
+
+.dark-mode .contact-form {
+    background-color: #444444;  /* Dark background for contact form */
+}
+
+.how-it-works-flow {
+    display: flex;
+    align-items: stretch; /* Make all step boxes same height */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.how-it-works-flow .step {
+    flex: 0 0 280px; /* Fixed width */
+    height: 220px;   /* Fixed height */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 30px var(--tile-shadow);
+    transition: all 0.3s ease;
+}
+
+.how-it-works-flow .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px var(--tile-shadow);
+}
+
+.arrow {
+    font-size: 2.5em;
+    color: var(--highlight-color);
+    user-select: none;
+    align-self: center;
+}
+
+.dark-mode .how-it-works-flow .step {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .how-it-works-flow .step:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .arrow {
+    color: #1DE9B6;
+}
+
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-choose-grid .tile {
+    text-align: center;
+    padding: 40px 30px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-grid .tile h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.why-choose-grid .tile p {
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+/* Chat widget light mode */
+.chat-box {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 300px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    max-height: 200px;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--input-focus-border);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.dark-mode .chat-box {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+.dark-mode .chat-input {
+    background-color: #2b2b2b;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+  
+
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;  /* Modern font */
+    background: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    margin: auto;
+    background-color: var(--text-light);
+    box-shadow: 0 4px 20px var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+
+/* Header */
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+}
+
+/* Tile Styling */
+.step, .tile, .testimonial {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 30px var(--tile-shadow);
+    transition: all 0.3s ease;
+}
+
+.step:hover, .tile:hover, .testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px var(--tile-shadow);
+}
+
+/* Form Styling */
+form input, form select, form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2em;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: var(--highlight-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--highlight-color);
+}
+
+form label {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--text-light);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px var(--tile-shadow);
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+    font-size: 2.5em;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    font-size: 1.1em;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+/* Hero Section */
+
+.hero-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background: var(--bg-gradient);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) {
+    .hero-header {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 100px 5%;
+    }
+
+    /* Divide the header into two halves */
+    .hero-text,
+    .hero-image {
+        width: 50%; /* Each takes half of the container width */
+    }
+
+    /* Center the image in the right half */
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.hero-text {
+    text-align: left; /* Align text to the left */
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  
+  .star-filled {
+    color: #FFD700; /* Gold */
+    font-size: 1.2rem;
+  }
+  
+  .star-empty {
+    color: #ccc; /* Light gray for empty stars */
+    font-size: 1.2rem;
+  }
+  
